@@ -3,7 +3,6 @@ package com.skanderjabouzi.testapplication
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import com.skanderjabouzi.testapplication.R
 
 class MainActivity4 : BaseActivity() {
 
@@ -19,5 +18,7 @@ class MainActivity4 : BaseActivity() {
         }
     }
 
-    companion object: InterfaceActivity by BaseActivity.Companion
+    companion object: InterfaceActivity {
+        override lateinit var nextActivity: BaseActivity
+    }
 }

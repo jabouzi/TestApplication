@@ -3,7 +3,6 @@ package com.skanderjabouzi.testapplication
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import com.skanderjabouzi.testapplication.R
 
 class MainActivity3 : BaseActivity() {
 
@@ -14,10 +13,12 @@ class MainActivity3 : BaseActivity() {
         setContentView(R.layout.activity_main3)
         button = findViewById(R.id.button3)
         button.setOnClickListener {
-            val intent = Intent(this, MainActivity3.nextActivity::class.java)
+            val intent = Intent(this, nextActivity::class.java)
             startActivity(intent)
         }
     }
 
-    companion object: InterfaceActivity by BaseActivity.Companion
+    companion object: InterfaceActivity {
+        override lateinit var nextActivity: BaseActivity
+    }
 }

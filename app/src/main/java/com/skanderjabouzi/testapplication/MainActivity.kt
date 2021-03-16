@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.skanderjabouzi.testapplication.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,7 +17,8 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             val intent = Intent(this, MainActivity2::class.java)
             MainActivity2.nextActivity = MainActivity3()
-            MainActivity3.nextActivity = LastActivity()
+            MainActivity3.nextActivity = MainActivity4()
+            MainActivity4.nextActivity = LastActivity()
             startActivity(intent)
         }
     }
